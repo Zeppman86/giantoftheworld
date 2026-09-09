@@ -35,68 +35,8 @@ export const AboutSection: React.FC = () => {
             Здесь не просто сухой топ мировых высоток! Мы собрали <strong className="text-white">{BUILDINGS.length} величайших инженерных чудес</strong> всех эпох — от пирамид до концептов городов будущего. Это приложение создано, чтобы увлечь архитектурой как взрослых, так и детей!
           </p>
           <p className="text-slate-400 leading-relaxed text-lg">
-            Привет! Я Гоша. Я сделал этот проект для своего сына Миши, чтобы на наглядных примерах изучать масштаб амбиций человечества. В базе есть небольшой географический перекос: мы добавили больше знаковых объектов России (храмы, МГУ, Родину-мать), чтобы изучать историю на самых близких и знакомых примерах.
+            В базе есть небольшой географический перекос: мы добавили больше знаковых объектов России (храмы, МГУ, Родину-мать), чтобы изучать историю на самых близких и знакомых примерах.
           </p>
-        </div>
-
-        <div className="relative z-10 bg-slate-950/50 p-6 sm:p-8 rounded-2xl border border-slate-800 backdrop-blur-sm mt-8">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-12 h-12 bg-amber-500/20 rounded-2xl flex items-center justify-center shrink-0">
-              <Heart className="w-6 h-6 text-amber-500 fill-amber-500/50" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-white">Поддержать проект</h3>
-              <p className="text-slate-400">Приложение доступно бесплатно, но мы будем рады любой поддержке!</p>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div className="flex justify-center md:justify-start lg:justify-center">
-              <div className="bg-white p-4 rounded-3xl shadow-xl flex items-center justify-center min-h-[160px] min-w-[160px] max-w-[200px] relative group">
-                <img 
-                  src="https://service-564367951768.us-west1.run.app/qr.png" 
-                  alt="QR-код Т-Банк" 
-                  className="w-full h-auto object-contain"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = 'none';
-                    const parent = (e.target as HTMLImageElement).parentElement;
-                    if (parent && !parent.querySelector('.fallback-text')) {
-                      const div = document.createElement('div');
-                      div.className = 'fallback-text text-center text-slate-500 font-medium p-4 text-xs';
-                      div.innerHTML = 'Загрузите картинку с QR-кодом<br/>в папку <b>public</b><br/>под именем <b>qr.png</b>';
-                      parent.appendChild(div);
-                    }
-                  }} 
-                />
-              </div>
-            </div>
-            
-            <div className="space-y-6">
-              <div>
-                <p className="text-sm text-slate-400 mb-1">Перевод по СБП (Сбербанк или Т-Банк)</p>
-                <p className="text-2xl font-mono font-bold text-white tracking-wider">+7 906 701-74-25</p>
-                <p className="text-xs text-amber-500 mt-1">Получатель: Георгий (Гоша)</p>
-              </div>
-              <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-3">
-                <button
-                  onClick={handleCopy}
-                  className={`flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold uppercase text-xs transition-all ${copied ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50' : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-600'}`}
-                >
-                  {copied ? <CheckCircle2 className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
-                  {copied ? 'Скопирован' : 'Скопировать номер'}
-                </button>
-                <a 
-                  href="https://t.me/zeppman86" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="flex-1 flex items-center justify-center gap-2 text-blue-400 hover:text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 px-4 py-3 rounded-xl transition-all font-bold text-xs uppercase"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Написать автору
-                </a>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 
@@ -275,17 +215,93 @@ export const AboutSection: React.FC = () => {
               </div>
             </div>
 
-            <div className="h-px w-full bg-slate-800 my-6"></div>
 
-            <div className="flex items-start gap-4">
-              <div className="w-10 h-10 bg-purple-500/10 rounded-xl flex items-center justify-center shrink-0">
-                <Heart className="w-5 h-5 text-purple-500" />
-              </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Support & About Authors Section */}
+      <div className="bg-gradient-to-br from-slate-900 to-slate-900/50 border border-amber-500/20 p-8 rounded-3xl space-y-8 relative overflow-hidden mt-8">
+        <div className="absolute top-0 left-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl -translate-y-1/2 -translate-x-1/2" />
+        
+        <div className="relative z-10 space-y-6">
+          <h3 className="text-3xl font-serif font-bold text-white flex items-center gap-3">
+            <Heart className="w-8 h-8 text-amber-500 fill-amber-500/50" />
+            О создании и создателях
+          </h3>
+          <p className="text-slate-300 leading-relaxed text-lg">
+            Привет! Я Гоша. Я начал делать этот проект в феврале 2026 года для своего сына Миши, потому что он интересуется историей, архитектурой и просто большими строениями. 
+          </p>
+          <p className="text-slate-300 leading-relaxed text-lg">
+            К сентябрю 2026 года я считаю его достаточно полным, чтобы показать миру. Многие идеи здесь — как раз Мишины, поэтому я полноценно указываю его в титрах, несмотря на возраст 7 лет. Я создал сайт, куда буду выкладывать другие проекты — <a href="https://v-a-c.xyz" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:text-amber-300 underline underline-offset-4 decoration-amber-500/30 transition-colors">v-a-c.xyz</a>.
+          </p>
+        </div>
+
+        <div className="relative z-10 bg-slate-950/50 p-6 sm:p-8 rounded-2xl border border-slate-800 backdrop-blur-sm mt-8">
+          <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
+            <div className="flex-1 space-y-6 w-full">
               <div>
-                <h4 className="text-lg font-bold mb-2 text-white">Разработано VAC</h4>
-                <p className="text-slate-400 text-sm leading-relaxed">
-                  Проект создан командой <strong>VAC</strong>. Посмотреть другие наши проекты можно на сайте <a href="https://v-a-c.xyz" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline underline-offset-4 decoration-blue-500/30">v-a-c.xyz</a>.
-                </p>
+                <h3 className="text-xl font-bold text-white mb-2">Поддержать проект</h3>
+                <p className="text-slate-400 text-sm">Приложение доступно бесплатно, но мы будем рады любой поддержке!</p>
+              </div>
+              
+              <div className="bg-slate-900 p-5 rounded-xl border border-slate-800">
+                <p className="text-sm text-slate-400 mb-1">Перевод по СБП (Сбербанк или Т-Банк)</p>
+                <p className="text-2xl font-mono font-bold text-white tracking-wider mb-1">+7 906 701-74-25</p>
+                <p className="text-xs text-amber-500 mb-5">Получатель: Георгий</p>
+                
+                <button
+                  onClick={handleCopy}
+                  className={`w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-bold uppercase text-xs transition-all ${copied ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/50' : 'bg-slate-800 hover:bg-slate-700 text-white border border-slate-600'}`}
+                >
+                  {copied ? <CheckCircle2 className="w-5 h-5" /> : <Copy className="w-5 h-5" />}
+                  {copied ? 'Скопирован' : 'Скопировать номер'}
+                </button>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3">
+                <a 
+                  href="https://v-a-c.xyz/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 text-white hover:text-amber-400 bg-slate-800 hover:bg-slate-700 px-4 py-3 rounded-xl transition-all font-bold text-xs uppercase border border-slate-700"
+                >
+                  <Globe className="w-5 h-5" />
+                  Наш сайт
+                </a>
+                <a 
+                  href="https://instagram.com/vibeandcoding" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="flex-1 flex items-center justify-center gap-2 text-pink-400 hover:text-pink-300 bg-pink-500/10 hover:bg-pink-500/20 px-4 py-3 rounded-xl transition-all font-bold text-xs uppercase border border-pink-500/20"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  Inst @vibeandcoding
+                </a>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row justify-center md:justify-end shrink-0 gap-4 mt-6 md:mt-0">
+              <div className="flex flex-col items-center gap-3">
+                <div className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group">
+                  <img 
+                    src="https://v-a-c.xyz/qr2.png" 
+                    alt="QR-код CloudTips" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">CloudTips</span>
+              </div>
+              
+              <div className="flex flex-col items-center gap-3">
+                <div className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group">
+                  <img 
+                    src="https://v-a-c.xyz/qr.png" 
+                    alt="QR-код Т-Банк" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Т-Банк</span>
               </div>
             </div>
           </div>
