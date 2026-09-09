@@ -1,0 +1,135 @@
+Original: Merdeka 118 -> Proposal: Merdeka 118
+Original: Lotte World Tower -> Proposal: Lotte World Tower
+Original: China Zun (CITIC Tower) -> Proposal: Чайна-Цзунь
+Original: Wuhan Greenland Center -> Proposal: Гринлэнд-центр (Ухань)
+Original: Landmark 81 -> Proposal: Landmark 81
+Original: Exchange 106 -> Proposal: Список самых высоких зданий и сооружений мира
+Original: Changsha IFS Tower T1 -> Proposal: Список самых высоких зданий и сооружений мира
+Original: Suzhou IFS -> Proposal: null
+Original: KK100 -> Proposal: null
+Original: Guangzhou International Finance Center -> Proposal: null
+Original: Steinway Tower -> Proposal: null
+Original: One Vanderbilt -> Proposal: null
+Original: Marina 101 -> Proposal: null
+Original: Trump International Hotel and Tower -> Proposal: null
+Original: Princess Tower -> Proposal: null
+Original: Al Hamra Tower -> Proposal: null
+Original: Two International Finance Centre -> Proposal: null
+Original: LCT The Sharp Landmark Tower -> Proposal: null
+Original: Nanning China Resources Tower -> Proposal: null
+Original: Guiyang International Financial Center T1 -> Proposal: null
+Original: China Resources Headquarters -> Proposal: null
+Original: 23 Marina -> Proposal: null
+Original: CITIC Plaza -> Proposal: null
+Original: Shum Yip Upperhills Tower 1 -> Proposal: null
+Original: 30 Hudson Yards -> Proposal: null
+Original: Capital Market Authority Headquarters -> Proposal: null
+Original: Shun Hing Square -> Proposal: null
+Original: Eton Place Dalian Tower 1 -> Proposal: null
+Original: Autograph Tower -> Proposal: null
+Original: Logan Century Center 1 -> Proposal: null
+Original: Elite Residence -> Proposal: null
+Original: Inco Superstack -> Proposal: null
+Original: Riverview Plaza -> Proposal: null
+Original: Shenzhen Center -> Proposal: null
+Original: Central Plaza -> Proposal: null
+Original: Dalian International Trade Center -> Proposal: null
+Original: Address Boulevard -> Proposal: null
+Original: Haitong Unitrust Finance Plaza -> Proposal: null
+Original: Golden Eagle Tiandi Tower A -> Proposal: null
+Original: Bank of China Tower -> Proposal: null
+Original: Bank of America Tower -> Proposal: null
+Original: St. Regis Chicago -> Proposal: null
+Original: Almas Tower -> Proposal: null
+Original: Gevora Hotel -> Proposal: null
+Original: Il Primo Tower -> Proposal: null
+Original: SEG Plaza -> Proposal: null
+Original: Emirates Office Tower -> Proposal: null
+Original: Raffles City Chongqing T3N -> Proposal: null
+Original: Raffles City Chongqing T4N -> Proposal: null
+Original: Forum 66 Tower 1 -> Proposal: null
+Original: The Pinnacle -> Proposal: null
+Original: 85 Sky Tower -> Proposal: null
+Original: Aon Center -> Proposal: null
+Original: The Center -> Proposal: null
+Original: Neva Towers 2 -> Proposal: null
+Original: John Hancock Center -> Proposal: null
+Original: Shimao Global Financial Center -> Proposal: null
+Original: ADNOC Headquarters -> Proposal: null
+Original: One Shenzhen Bay -> Proposal: null
+Original: LCT The Sharp Residential Tower A -> Proposal: null
+Original: Wuxi International Finance Square -> Proposal: null
+Original: Chongqing World Financial Center -> Proposal: null
+Original: Tianjin Modern City Office Tower -> Proposal: null
+Original: Suning Plaza -> Proposal: null
+Original: Hengqin International Finance Center -> Proposal: null
+Original: DAMAC Residenze -> Proposal: null
+Original: Twin Towers Macau -> Proposal: null
+Original: Shimao International Plaza -> Proposal: null
+Original: Rose Rayhaan by Rotana -> Proposal: null
+Original: Jinan Centre Financial City -> Proposal: null
+Original: Minsheng Bank Building -> Proposal: null
+Original: China World Trade Center Tower III -> Proposal: null
+Original: Hon Kwok City Center -> Proposal: null
+Original: Keangnam Hanoi Landmark Tower -> Proposal: null
+Original: Three World Trade Center -> Proposal: null
+Original: Baoneng Center -> Proposal: null
+Original: Wuxi Suning Plaza 1 -> Proposal: null
+Original: Al Yaqoub Tower -> Proposal: null
+Original: The Index -> Proposal: null
+Original: The Landmark -> Proposal: null
+Original: Deji Plaza -> Proposal: null
+Original: Yantai Shimao No.1 The Harbour -> Proposal: null
+Original: Q1 Tower -> Proposal: null
+Original: Wenzhou World Trade Center -> Proposal: null
+Original: Nina Tower -> Proposal: null
+Original: Sinar Mas Center 1 -> Proposal: null
+Original: Global City Square -> Proposal: null
+Original: New York Times Building -> Proposal: null
+Original: Chongqing IFS T1 -> Proposal: null
+Original: Nanjing International Youth Cultural Centre Tower 1 -> Proposal: null
+Original: Honglou Times Square -> Proposal: null
+Original: Youth Olympics Center Tower 1 -> Proposal: null
+Original: MahaNakhon -> Proposal: null
+Original: Bank of America Plaza -> Proposal: null
+Original: Moynihan Train Hall -> Proposal: null
+Original: Ocean Heights -> Proposal: null
+Original: Varso Tower -> Proposal: null
+Original: The Shard -> Proposal: null
+Original: Pearl River Tower -> Proposal: null
+Original: Fortune Center -> Proposal: null
+Original: Jumeirah Emirates Towers Hotel -> Proposal: null
+Original: Starlight Place -> Proposal: null
+Original: Guangfa Securities Headquarters -> Proposal: null
+Original: Burj Rafal -> Proposal: null
+Original: 35 Hudson Yards -> Proposal: null
+Original: Wanda Plaza -> Proposal: null
+Original: Amoco Building -> Proposal: null
+Original: Cayan Tower -> Proposal: null
+Original: One57 -> Proposal: null
+Original: East Pacific Center Tower A -> Proposal: null
+Original: The Address Downtown Dubai -> Proposal: null
+Original: Kingdom Centre -> Proposal: null
+Original: Huaguoyuan Tower 1 -> Proposal: null
+Original: Huaguoyuan Tower 2 -> Proposal: null
+Original: Gran Torre Santiago -> Proposal: null
+Original: Abeno Harukas -> Proposal: null
+Original: NBK Tower -> Proposal: null
+Original: First Canadian Place -> Proposal: null
+Original: Shanghai Wheelock Square -> Proposal: null
+Original: 4 World Trade Center -> Proposal: null
+Original: Comcast Center -> Proposal: null
+Original: Eureka Tower -> Proposal: null
+Original: Landmark 72 -> Proposal: null
+Original: OUE Downtown 1 -> Proposal: null
+Original: 311 South Wacker Drive -> Proposal: null
+Original: Global Trade Center -> Proposal: null
+Original: 70 Pine Street -> Proposal: null
+Original: Key Tower -> Proposal: null
+Original: One Liberty Place -> Proposal: null
+Original: Columbia Center -> Proposal: null
+Original: The Address Dubai Mall -> Proposal: null
+Original: 22 Bishopsgate -> Proposal: null
+Original: Citigroup Center -> Proposal: null
+Original: Scotia Plaza -> Proposal: null
+Original: Williams Tower -> Proposal: null

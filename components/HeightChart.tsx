@@ -18,12 +18,11 @@ interface HeightChartProps {
 const CHART_SCALE = [
   { pos: 0, year: -8000 },
   { pos: 15, year: -3200 },
-  { pos: 25, year: -2560 },
-  { pos: 45, year: 1311 },  
-  { pos: 60, year: 1889 },  
-  { pos: 75, year: 1970 },  
-  { pos: 90, year: 2026 },
-  { pos: 100, year: 2035 }
+  { pos: 30, year: -2560 },
+  { pos: 50, year: 1311 },  
+  { pos: 65, year: 1889 },  
+  { pos: 80, year: 1970 },  
+  { pos: 100, year: 2026 }
 ];
 
 const yearToPos = (year: number) => {
@@ -36,7 +35,7 @@ const yearToPos = (year: number) => {
       return start.pos + progress * (end.pos - start.pos);
     }
   }
-  return year > 2035 ? 100 : 0;
+  return year > 2026 ? 100 : 0;
 };
 
 export const HeightChart: React.FC<HeightChartProps> = ({ currentYear }) => {
@@ -70,7 +69,7 @@ export const HeightChart: React.FC<HeightChartProps> = ({ currentYear }) => {
       });
     } else {
       steppedData.push({
-        year: 2035,
+        year: 2026,
         pos: 100,
         height: d.height,
         name: d.name
@@ -116,14 +115,13 @@ export const HeightChart: React.FC<HeightChartProps> = ({ currentYear }) => {
           tick={{ fill: '#64748b', fontSize: 10 }}
           axisLine={{ stroke: '#334155' }}
           tickFormatter={(pos) => {
-            if (pos === 0) return '8000 BC';
-            if (pos === 25) return '2500 BC';
-            if (pos === 45) return '1300';
-            if (pos === 90) return '2026';
-            if (pos === 100) return '2035';
+            if (pos === 0) return '8000 до н.э.';
+            if (pos === 30) return '2500 до н.э.';
+            if (pos === 50) return '1300';
+            if (pos === 100) return '2026';
             return '';
           }}
-          ticks={[0, 15, 25, 45, 60, 75, 90, 100]}
+          ticks={[0, 15, 30, 50, 65, 80, 100]}
         />
         <YAxis 
           tick={{ fill: '#64748b', fontSize: 10 }}
