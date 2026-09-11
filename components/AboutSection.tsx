@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { BookOpen, Ruler, ArrowUpToLine, Building2, Radio, Heart, Copy, CheckCircle2, Coffee, MessageCircle, PersonStanding, Globe, Rocket } from 'lucide-react';
+import { BookOpen, Ruler, ArrowUpToLine, Building2, Radio, Heart, Copy, CheckCircle2, Coffee, MessageCircle, PersonStanding, Globe, Rocket, X } from 'lucide-react';
 import { BUILDINGS } from '../data';
 
 export const AboutSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
   const [showTop200, setShowTop200] = useState(false);
+  const [expandedQr, setExpandedQr] = useState<string | null>(null);
 
   const handleCopy = () => {
     navigator.clipboard.writeText('+79067017425');
@@ -32,7 +33,7 @@ export const AboutSection: React.FC = () => {
             Больше, чем просто метры
           </h3>
           <p className="text-slate-300 leading-relaxed text-xl font-medium">
-            Здесь не просто сухой топ мировых высоток! Мы собрали <strong className="text-white">{BUILDINGS.length} величайших инженерных чудес</strong> всех эпох — от пирамид до концептов городов будущего. Это приложение создано, чтобы увлечь архитектурой как взрослых, так и детей!
+            Здесь не просто сухой топ мировых высоток! Мы собрали <strong className="text-white">около 200 величайших инженерных чудес</strong> всех эпох — от пирамид до концептов городов будущего. Это приложение создано, чтобы увлечь архитектурой как взрослых, так и детей!
           </p>
           <p className="text-slate-400 leading-relaxed text-lg">
             В базе есть небольшой географический перекос: мы добавили больше знаковых объектов России (храмы, МГУ, Родину-мать), чтобы изучать историю на самых близких и знакомых примерах.
@@ -283,23 +284,31 @@ export const AboutSection: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row justify-center md:justify-end shrink-0 gap-4 mt-6 md:mt-0">
               <div className="flex flex-col items-center gap-3">
-                <div className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group">
+                <div 
+                  className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => setExpandedQr("https://v-a-c.xyz/qr2.png")}
+                >
                   <img 
                     src="https://v-a-c.xyz/qr2.png" 
                     alt="QR-код CloudTips" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain pointer-events-none"
                   />
+                  <div className="absolute inset-0 bg-black/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" />
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">CloudTips</span>
               </div>
               
               <div className="flex flex-col items-center gap-3">
-                <div className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group">
+                <div 
+                  className="bg-white p-3 rounded-2xl shadow-xl flex items-center justify-center w-[140px] h-[140px] relative group cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => setExpandedQr("https://v-a-c.xyz/qr.png")}
+                >
                   <img 
                     src="https://v-a-c.xyz/qr.png" 
                     alt="QR-код Т-Банк" 
-                    className="w-full h-full object-contain"
+                    className="w-full h-full object-contain pointer-events-none"
                   />
+                  <div className="absolute inset-0 bg-black/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center" />
                 </div>
                 <span className="text-xs font-bold text-slate-400 uppercase tracking-wider">Т-Банк</span>
               </div>
@@ -307,6 +316,27 @@ export const AboutSection: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* QR Code Modal */}
+      {expandedQr && (
+        <div 
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+          onClick={() => setExpandedQr(null)}
+        >
+          <div 
+            className="relative bg-white p-6 rounded-3xl max-w-sm w-full animate-in zoom-in-95 duration-200 shadow-2xl" 
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setExpandedQr(null)}
+              className="absolute -top-14 right-0 md:-right-14 text-white/70 hover:text-white transition-colors p-2 bg-black/20 hover:bg-black/40 rounded-full"
+            >
+              <X className="w-8 h-8" />
+            </button>
+            <img src={expandedQr} alt="QR Code Enlarged" className="w-full h-auto object-contain rounded-xl" />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

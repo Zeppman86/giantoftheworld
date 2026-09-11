@@ -17,7 +17,7 @@ const FUTURE_BUILDINGS: Building[] = [
   { id: 'x-seed', name: 'X-Seed 4000', location: 'Япония', countryCode: 'jp', height: 4000, yearBuilt: 2099, activeUntil: 2200, category: 'Modern' as const, description: 'Утопический проект мегаструктуры-города, способного вместить до миллиона жителей. Здание будет иметь форму горы Фудзияма.', funFact: 'Основание этой грандиозной конструкции должно быть около 6 км в ширину.', imageUrl: 'https://upload.wikimedia.org/wikipedia/ru/4/4c/X-seed4000.jpg', forceImageUpdate: true },
   { id: 'nikitin-travush', name: 'Башня Никитина-Травуша', location: 'Россия / Япония', countryCode: ['ru', 'jp'], height: 4000, yearBuilt: 2050, activeUntil: 2200, category: 'Engineering' as const, description: 'Концептуальный проект советских инженеров (разработчиков Останкинской башни). Этот стальной шпиль высотой 4 км мог бы стать высочайшим сооружением на планете.', funFact: 'Башня должна была проектироваться для Японии, но строительство так и не началось из-за сложности и стоимости.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Nikitin-4000-Tokyo-Tower_project_skyline.jpg/500px-Nikitin-4000-Tokyo-Tower_project_skyline.jpg', forceImageUpdate: true },
   { id: 'shimizu-pyramid', name: 'Shimizu Mega-City Pyramid', location: 'Япония', countryCode: 'jp', height: 2004, yearBuilt: 2100, activeUntil: 2200, category: 'Modern' as const, description: 'Огромная пирамида над Токийским заливом, способная вместить миллион человек. Высота этой структуры в 14 раз превосходила бы пирамиду Хеопса.', funFact: 'Для ее возведения потребуется использовать углеродные нанотрубки, поскольку обычные материалы не выдержат такого веса.', imageUrl: 'https://upload.wikimedia.org/wikipedia/en/f/f2/Shimizu_Mega-City_Pyramid_concept_from_Extreme_Engineering.gif', forceImageUpdate: true },
-  { id: 'sky-mile', name: 'Sky Mile Tower', location: 'Япония', countryCode: 'jp', height: 1700, yearBuilt: 2045, activeUntil: 2200, category: 'Modern' as const, description: 'Концепция башни в Токийском заливе, которая будет в два раза выше Бурдж-Халифа. Включает многоуровневые системы ветрозащиты.', funFact: 'Спроектирована так, чтобы выдерживать частые землетрясения и тайфуны.', imageUrl: 'https://media.cntraveler.com/photos/5a9d6e8660543c4ae96c3497/16:9/w_1920,c_limit/tokyo-will-look-like-2045-including-mile-high-skyscraper-01.JPG', forceImageUpdate: true },
+  { id: 'sky-mile', name: 'Sky Mile Tower', location: 'Япония', countryCode: 'jp', height: 1700, yearBuilt: 2045, activeUntil: 2200, category: 'Modern' as const, description: 'Концепция башни в Токийском заливе, которая будет в два раза выше Бурдж-Халифа. Включает многоуровневые системы ветрозащиты.', funFact: 'Спроектирована так, чтобы выдерживать частые землетрясения и тайфуны.', imageUrl: 'https://i.pinimg.com/1200x/37/f5/34/37f534e1afe99ee21b3a58c22ca07ce5.jpg', forceImageUpdate: true },
   { id: 'the-illinois', name: '«Иллинойс» (The Illinois)', location: 'США', countryCode: 'us', height: 1609, yearBuilt: 2060, activeUntil: 2200, category: 'Modern' as const, description: 'Знаменитый проект Фрэнка Ллойда Райта (1956 г.) башни высотой ровно 1 миля для Чикаго. Башня-мечта, предвосхитившая небоскребы XXI века.', funFact: 'По проекту здание должно было обслуживаться 76 атомными лифтами.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/The_Illinois.png/500px-The_Illinois.png', forceImageUpdate: true },
   { id: 'dubai-creek', name: 'Dubai Creek Tower', location: 'ОАЭ', countryCode: 'ae', height: 1300, yearBuilt: 2035, activeUntil: 2200, category: 'Modern' as const, description: 'Грандиозная смотровая башня на стальных тросах. Предполагалось, что она превзойдет Бурдж-Халифа на несколько сотен метров.', funFact: 'Форма башни вдохновлена цветком лилии и минаретом.', imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Creek_Tower.webp/500px-Creek_Tower.webp.png', forceImageUpdate: true },
   { id: 'bionic-tower', name: 'Бионическая башня', location: 'Китай (проект из Испании)', countryCode: ['cn', 'es'], height: 1128, yearBuilt: 2040, activeUntil: 2200, category: 'Modern' as const, description: 'Футуристический вертикальный город на 100 тысяч жителей, спроектированный испанцами для Шанхая.', funFact: 'Башня должна стоять на искусственном острове-фундаменте, имитирующем корневую систему деревьев.', imageUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Bionic_Tower_rendering.jpg/500px-Bionic_Tower_rendering.jpg', forceImageUpdate: true },
@@ -134,7 +134,8 @@ const App: React.FC = () => {
   }, [relevantData, topBuildings, currentYear]);
 
   const filteredLibrary = useMemo(() => {
-    return buildings.filter(b => {
+    const allLibraryBuildings = [...buildings, ...FUTURE_BUILDINGS];
+    return allLibraryBuildings.filter(b => {
       const matchesSearch = b.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                             b.location.toLowerCase().includes(searchQuery.toLowerCase());
       const matchesCategory = categoryFilter === 'all' || 
@@ -199,7 +200,7 @@ const App: React.FC = () => {
                 <h1 className="text-xl font-bold font-serif leading-none tracking-tight">Архитектурные Гиганты</h1>
                 <div className="flex items-center gap-2 mt-1">
                   <Database className="w-3 h-3 text-amber-500" />
-                  <span className="text-[10px] font-black uppercase text-amber-500 tracking-widest">Общая база: {buildings.length}</span>
+                  <span className="text-[10px] font-black uppercase text-amber-500 tracking-widest">Общая база: {buildings.length + FUTURE_BUILDINGS.length}</span>
                 </div>
               </div>
             </div>
@@ -366,7 +367,7 @@ const App: React.FC = () => {
               <div className="max-w-3xl">
                 <h2 className="text-3xl md:text-4xl font-serif font-bold">Мастер-Архив</h2>
                 <p className="text-slate-400 mt-3 text-sm md:text-base leading-relaxed">
-                  Полная коллекция из <strong className="text-amber-500">{buildings.length}</strong> сооружений. Здесь собраны не только современные рекордсмены-небоскрёбы, но и самые значимые исторические и культурные объекты всех эпох. Доступны фотографии, описания и интересные факты о каждом из них.
+                  Полная коллекция из <strong className="text-amber-500">{filteredLibrary.length > 0 ? (buildings.length + FUTURE_BUILDINGS.length) : (buildings.length + FUTURE_BUILDINGS.length)}</strong> подробных карточек. Здесь собраны современные рекордсмены, исторические памятники, а также нереализованные концепты городов будущего.
                 </p>
               </div>
             </div>
@@ -396,16 +397,9 @@ const App: React.FC = () => {
 
       {/* Global Footer */}
       <div className="max-w-5xl mx-auto w-full px-4 md:px-8 pb-10">
-        <div className="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-sm">
-          <div className="text-center md:text-left leading-relaxed">
+        <div className="border-t border-slate-800/50 pt-8 flex flex-col md:flex-row items-center justify-center gap-4 text-slate-500 text-sm">
+          <div className="text-center leading-relaxed">
             &copy; 2026. Проект создан VAC: Гоша Сарибекян и Миша Сарибекян.<br className="md:hidden" /> Другие наши проекты здесь - <a href="https://v-a-c.xyz" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors underline underline-offset-4 decoration-slate-700">v-a-c.xyz</a>
-          </div>
-          <div className="flex flex-wrap justify-center items-center gap-4 md:gap-6 font-medium">
-            <button onClick={() => {
-              setActiveTab('about');
-              window.scrollTo(0, 0);
-            }} className="hover:text-amber-500 transition-colors">Как поддержать проект</button>
-            <a href="https://t.me/zeppman86" target="_blank" rel="noopener noreferrer" className="hover:text-amber-500 transition-colors">Связаться с нами</a>
           </div>
         </div>
       </div>
